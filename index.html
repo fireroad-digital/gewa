@@ -94,7 +94,7 @@
     mapboxgl.accessToken = 'pk.eyJ1IjoidGltaHNpZWgiLCJhIjoiY2xzdGQ1a2M4MG41ZDJrcng3NXEzcGdvOCJ9.btcwE0JmA5lib2H1uAaM3A'; // Mapbox token
     var map = new mapboxgl.Map({
       container: 'map', // container id
-      style: 'mapbox://styles/mapbox/streets-v11', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
+      style: 'mapbox://styles/timhsieh/clstesdzc00fs01p6alw43nia', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
       center: [-122.411, 37.785], // starting position [lng, lat]
       zoom: 10,// starting zoom
       transformRequest: transformRequest
@@ -120,14 +120,13 @@
             //Add the the layer to the map
             map.addLayer({
               'id': 'csvData',
-              'type': 'circle',
+              'type': 'symbol',
               'source': {
                 'type': 'geojson',
                 'data': data
               },
-              'paint': {
-                'circle-radius': 5,
-                'circle-color': "purple"
+              'layout': {
+                'icon-image': 'music',
               }
             });
 

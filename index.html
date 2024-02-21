@@ -100,6 +100,7 @@
       zoomAnimation: false,
       transformRequest: transformRequest
     });
+    var loaded = false;
 
     $(document).ready(function () {
       $.ajax({
@@ -110,78 +111,94 @@
         success: function (csvData) { makeGeoJSON(csvData); }
       });
 
+      map.on('load', function () {
+        console.log('on load standalone');
+        loaded = true;
+      });
+
+      function addMarkers(data) {
+        map.addLayer({
+          'id': 'csvData',
+          'type': 'symbol',
+          'source': {
+            'type': 'geojson',
+            'data': data
+          },
+          'layout': {
+            'icon-image': 'music',
+          }
+        });
+      }
+
+      function popupInfo(csvData) {
+        map.on('click', 'csvData', function (e) {
+          var coordinates = e.features[0].geometry.coordinates.slice();
+
+          //set popup text
+          //You can adjust the values of the popup to match the headers of your CSV.
+          // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
+          let orgLat = e.features[0].properties.OrgLatitude;
+          let orgLng = e.features[0].properties.OrgLongitude;
+          var description = `<h3>${e.features[0].properties.Name}</h3>`;
+          description += `<h4><a target='_blank' href='https://www.google.com/maps/dir//${orgLat},${orgLng}'>Directions</a></h4>`;
+          description += `<h4><b>Address:</b> ${e.features[0].properties.Address}</h4>`;
+          description += `<h4><b>Phone:</b> ${e.features[0].properties.Phone}</h4>`;
+
+          // Ensure that if the map is zoomed out such that multiple
+          // copies of the feature are visible, the popup appears
+          // over the copy being pointed to.
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
+
+          //add Popup to map
+
+          new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+        });
+      }
+
+      function miscSetup(data) {
+         // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'csvData', function () {
+          map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', function () {
+          map.getCanvas().style.cursor = '';
+        });
+
+        var bbox = turf.bbox(data);
+        map.fitBounds(bbox, { padding: 50 });
+      }
+
       function makeGeoJSON(csvData) {
         csv2geojson.csv2geojson(csvData, {
           latfield: 'Latitude',
           lonfield: 'Longitude',
           delimiter: ','
         }, function (err, data) {
-          map.on('load', function () {
+          console.log('csv2geojson returned');
+          if (loaded) {
+            addMarkers(data);
+            popupInfo(csvData);
+            miscSetup(data);
+          }
+          else {
+            map.on('load', function () {
 
-            //Add the the layer to the map
-            map.addLayer({
-              'id': 'csvData',
-              'type': 'symbol',
-              'source': {
-                'type': 'geojson',
-                'data': data
-              },
-              'layout': {
-                'icon-image': 'music',
-              }
+              console.log('on load inner');
+              addMarkers(data);
+              popupInfo(csvData);
+              miscSetup(data);
             });
-
-            // When a click event occurs on a feature in the csvData layer, open a popup at the
-            // location of the feature, with description HTML from its properties.
-            map.on('click', 'csvData', function (e) {
-              var coordinates = e.features[0].geometry.coordinates.slice();
-
-              //set popup text
-              //You can adjust the values of the popup to match the headers of your CSV.
-              // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
-              let orgLat = e.features[0].properties.OrgLatitude;
-              let orgLng = e.features[0].properties.OrgLongitude;
-              var description = `<h3>${e.features[0].properties.Name}</h3>`;
-              description += `<h4><a target='_blank' href='https://www.google.com/maps/dir//${orgLat},${orgLng}'>Directions</a></h4>`;
-              description += `<h4><b>Address:</b> ${e.features[0].properties.Address}</h4>`;
-              description += `<h4><b>Phone:</b> ${e.features[0].properties.Phone}</h4>`;
-
-              // Ensure that if the map is zoomed out such that multiple
-              // copies of the feature are visible, the popup appears
-              // over the copy being pointed to.
-              while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-              }
-
-              //add Popup to map
-
-              new mapboxgl.Popup()
-                .setLngLat(coordinates)
-                .setHTML(description)
-                .addTo(map);
-            });
-
-            // Change the cursor to a pointer when the mouse is over the places layer.
-            map.on('mouseenter', 'csvData', function () {
-              map.getCanvas().style.cursor = 'pointer';
-            });
-
-            // Change it back to a pointer when it leaves.
-            map.on('mouseleave', 'places', function () {
-              map.getCanvas().style.cursor = '';
-            });
-
-            var bbox = turf.bbox(data);
-            map.fitBounds(bbox, { padding: 50 });
-
-          });
-
+          }
         });
       };
     });
-
-
-
 
   </script>
 

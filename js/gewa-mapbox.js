@@ -7,7 +7,7 @@
 const token = 'pk.eyJ1IjoidGltaHNpZWgiLCJhIjoiY2xzdWkxbGp4MDVoMzJqbHFvYWtoaGw4eSJ9.bKE5yaFsALONvh0mRXSONg';
 const sheet = 'https://docs.google.com/spreadsheets/d/1OjZjaZGoay1VXQeizjwg67A1Soi9q0ra3EVYmH6-9_Q/gviz/tq?tqx=out:csv&sheet=Sheet1';
 
-var transformRequest = (url, resourceType) => {
+var transformRequest = (url) => {
   var isMapboxRequest =
     url.slice(8, 22) === "api.mapbox.com" ||
     url.slice(10, 26) === "tiles.mapbox.com";
@@ -55,11 +55,11 @@ $(document).ready(function () {
       type: 'symbol',
       source: {
         type: 'geojson',
-        data: data,
+        data: data
       },
       layout: {
-        'icon-image': 'music',
-      },
+        'icon-image': 'music'
+      }
     });
 
     map.on('click', 'csvData', function (e) {
@@ -126,5 +126,5 @@ $(document).ready(function () {
         });
       }
     });
-  };
+  }
 });

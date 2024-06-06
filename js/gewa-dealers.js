@@ -19,11 +19,12 @@ $(document).ready(function () {
       sortByState(colMap, sheetData.table.rows);
       let currentState = "";
       sheetData.table.rows.forEach((row) => {
+        let abbr = row['c'][colMap['State Abb']].v
         if (row['c'][colMap["State"]].v != currentState) {
           currentState = row['c'][colMap["State"]].v;
-          $('#dealers').append(`<h2>${currentState}</h2>`);
+          $('#dealers').append(`<div class="state-wrapper clearfix"><h3>${currentState}</h3><div id="state-${abbr}" class="dealers-state"></div></div>`)
         }
-        $('#dealers').append(renderDealer(colMap, row['c']))
+        $(`#state-${abbr}`).append(renderDealer(colMap, row['c']))
       })
 
       // Notify the parent so it can set the iframe height.
@@ -51,7 +52,7 @@ function renderDealer(map, column) {
   let output = '<address>';
 
   if (column[map.Name]!= undefined) {
-    output += `${column[map.Name].v} <br />`;
+    output += `<span class="dealer-name">${column[map.Name].v}</span><br />`;
   }
   if (column[map.AddressLine1] != undefined) {
     output += `${column[map.AddressLine1].v} <br />`;
@@ -77,7 +78,7 @@ function renderDealer(map, column) {
     output += `<a href="tel:+1${num}">${column[map.Phone].v}</a> <br />`;
   }
 
-  output += '</address>';
+  output += '</div></address>';
 
   return output;
 }

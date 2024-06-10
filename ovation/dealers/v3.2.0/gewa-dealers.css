@@ -2,7 +2,7 @@ address {
   margin-bottom: 1rem;
   width: 50%;
   float: left;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 address:nth-child(2n+3) {
@@ -10,12 +10,14 @@ address:nth-child(2n+3) {
 }
 
 h2 {
-  font-size: 3.6rem;
+  font-size: 2.25rem;
   text-align: center;
+  font-weight: normal;
+  padding-top: 20px;
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.375rem;
   font-weight: normal;
   text-transform: uppercase;
   clear: both;
@@ -29,13 +31,13 @@ h3 {
 }
 
 .dealer-name {
-  font-size: 1.4rem;
+  font-size: 1.125rem;
   font-weight: bold;
 }
 
 .state-wrapper {
   border-top: 1px solid black;
-  padding-top: 1rem;
+  padding-top: 25px;
 }
 .state-wrapper:first-child {
   border-top: none;

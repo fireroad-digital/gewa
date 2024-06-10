@@ -112,10 +112,10 @@ function getColMap(table) {
  */
 function sortByState(map, rows) {
   rows.sort((a, b) => {
-    if (a.c[map["State Abb"]].v < b.c[map["State Abb"]].v) {
+    if (a.c[map["State"]].v < b.c[map["State"]].v) {
       return -1;
     }
-    if (a.c[map["State Abb"]].v > b.c[map["State Abb"]].v) {
+    if (a.c[map["State"]].v > b.c[map["State"]].v) {
       return 1;
     }
     return 0;

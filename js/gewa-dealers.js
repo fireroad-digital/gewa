@@ -77,6 +77,9 @@ function renderDealer(map, column) {
     num.replace(/\D/g, '');
     output += `<a href="tel:+1${num}">${column[map.Phone].v}</a> <br />`;
   }
+  if (column[map.Website] != undefined && column[map.Website].v!= null) {
+    output += `<a href="${column[map.Website].v}">${column[map.Website].v}</a> <br />`;
+  }
 
   output += '</div></address>';
 

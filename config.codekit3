@@ -649,7 +649,15 @@
       "oAP" : "\/.gitpod\/project-setup.sh",
       "oF" : 0
     },
-    "\/css\/gewa-dealers.css" : {
+    "\/change_ver.sh" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/change_ver.sh",
+      "oF" : 1
+    },
+    "\/css\/gewa-dealers-min.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
@@ -657,7 +665,31 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 0,
+      "oAP" : "\/css\/gewa-dealers-min-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/css\/gewa-dealers.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 1,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
       "oAP" : "\/css\/gewa-dealers-min.css",
+      "oF" : 0,
+      "pg" : 0
+    },
+    "\/css\/gewa-mapbox-min.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/css\/gewa-mapbox-min-min.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -668,9 +700,9 @@
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 2,
-      "oAP" : "\/ovation\/mapbox\/v3.0.0\/gewa-mapbox.css",
-      "oF" : 3,
+      "oA" : 0,
+      "oAP" : "\/css\/gewa-mapbox-min.css",
+      "oF" : 0,
       "pg" : 0
     },
     "\/index.html" : {
@@ -729,67 +761,84 @@
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/ovation\/dealers\/gewa-dealers-ovation.html",
-      "oF" : 1
-    },
-    "\/ovation\/dealers\/v3.2.1\/gewa-dealers-min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/ovation\/dealers\/v3.2.1\/gewa-dealers-min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
+      "oAP" : "\/ovation\/dealers\/gewa-dealers-ovation.html",
+      "oF" : 0
     },
-    "\/ovation\/dealers\/v3.2.1\/gewa-dealers.css" : {
+    "\/ovation\/dealers\/v3.2.2\/gewa-dealers-min.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/ovation\/dealers\/v3.2.1\/gewa-dealers-min.css",
-      "oF" : 0,
+      "oA" : 1,
+      "oAP" : "\/ovation\/dealers\/v3.2.2\/gewa-dealers-min-min.css",
+      "oF" : 1,
       "pg" : 0
+    },
+    "\/ovation\/dealers\/v3.2.2\/gewa-dealers-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/ovation\/dealers\/v3.2.2\/gewa-dealers-min-min.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
     },
     "\/ovation\/mapbox\/gewa-mapbox-ovation.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/ovation\/mapbox\/gewa-mapbox-ovation.html",
-      "oF" : 1
-    },
-    "\/ovation\/mapbox\/v3.2.1\/gewa-mapbox-min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/ovation\/mapbox\/v3.2.1\/gewa-mapbox-min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
+      "oAP" : "\/ovation\/mapbox\/gewa-mapbox-ovation.html",
+      "oF" : 0
     },
-    "\/ovation\/mapbox\/v3.2.1\/gewa-mapbox.css" : {
+    "\/ovation\/mapbox\/v3.2.2\/gewa-mapbox-min.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/ovation\/mapbox\/v3.2.1\/gewa-mapbox-min.css",
-      "oF" : 0,
+      "oA" : 1,
+      "oAP" : "\/ovation\/mapbox\/v3.2.2\/gewa-mapbox-min-min.css",
+      "oF" : 1,
       "pg" : 0
+    },
+    "\/ovation\/mapbox\/v3.2.2\/gewa-mapbox-min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/ovation\/mapbox\/v3.2.2\/gewa-mapbox-min-min.js",
+      "oF" : 1,
+      "sC" : 3,
+      "tS" : 0
     }
   },
   "hooks" : [
-
+    {
+      "enabled" : 1,
+      "name" : "Copy mapbox output files to ovation",
+      "predicateDataBase64Encoded" : "YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBoLDBMZISssLzY6P0BDR0tQUVRcYGRpbG1wclUkbnVsbNMNDg8QERJfEBdOU0NvbXBvdW5kUHJlZGljYXRlVHlwZV8QD05TU3VicHJlZGljYXRlc1YkY2xhc3MQAoACgBnSFA8VGFpOUy5vYmplY3RzohYXgAOAFIAY1A8aGxwdHh8gXxARTlNSaWdodEV4cHJlc3Npb25fEBBOU0xlZnRFeHByZXNzaW9uXxATTlNQcmVkaWNhdGVPcGVyYXRvcoATgA6ABIAR1SIjJCUPJicoKSpZTlNPcGVyYW5kXk5TU2VsZWN0b3JOYW1lXxAQTlNFeHByZXNzaW9uVHlwZVtOU0FyZ3VtZW50c4AGgAUQA4AIgA1cdmFsdWVGb3JLZXk60iQPLS4QAYAH0jAxMjNaJGNsYXNzbmFtZVgkY2xhc3Nlc18QEE5TU2VsZkV4cHJlc3Npb26jMjQ1XE5TRXhwcmVzc2lvblhOU09iamVjdNIUDzc5oTiACYAM0w8kOzw9PllOU0tleVBhdGiACxAKgApfEBRpbnB1dEFiYnJldmlhdGVkUGF0aNIwMUFCXxAcTlNLZXlQYXRoU3BlY2lmaWVyRXhwcmVzc2lvbqNBNDXSMDFERV5OU011dGFibGVBcnJheaNERjVXTlNBcnJhedIwMUhJXxATTlNLZXlQYXRoRXhwcmVzc2lvbqRISjQ1XxAUTlNGdW5jdGlvbkV4cHJlc3Npb27TTCQPTU5PXxAPTlNDb25zdGFudFZhbHVlgA8QAIAQXxASL2pzL2dld2EtbWFwYm94Lmpz0jAxUlNfEBlOU0NvbnN0YW50VmFsdWVFeHByZXNzaW9uo1I0NdUPVVZXWFlOWihbWk5TTW9kaWZpZXJYTlNOZWdhdGVZTlNPcHRpb25zXk5TT3BlcmF0b3JUeXBlgBIIEATSMDFdXl8QG05TRXF1YWxpdHlQcmVkaWNhdGVPcGVyYXRvcqNdXzVfEBNOU1ByZWRpY2F0ZU9wZXJhdG9y0jAxYWJfEBVOU0NvbXBhcmlzb25QcmVkaWNhdGWjYWM1W05TUHJlZGljYXRl1A8aGxwdZh9ogBOAFYAEgBfTTCQPak5PgBaAEF8QFC9jc3MvZ2V3YS1tYXBib3guY3Nz1Q9VVldYWU5aKFuAEgjSMDFGcaJGNdIwMXN0XxATTlNDb21wb3VuZFByZWRpY2F0ZaNzYzUACAARABoAJAApADIANwBJAEwAUQBTAHAAdgB9AJcAqQCwALIAtAC2ALsAxgDJAMsAzQDPANgA7AD\/ARUBFwEZARsBHQEoATIBQQFUAWABYgFkAWYBaAFqAXcBfAF+AYABhQGQAZkBrAGwAb0BxgHLAc0BzwHRAdgB4gHkAeYB6AH\/AgQCIwInAiwCOwI\/AkcCTAJiAmcCfgKFApcCmQKbAp0CsgK3AtMC1wLiAu0C9gMAAw8DEQMSAxQDGQM3AzsDUQNWA24DcgN+A4cDiQOLA40DjwOWA5gDmgOxA7wDvgO\/A8QDxwPMA+IAAAAAAAACAQAAAAAAAAB1AAAAAAAAAAAAAAAAAAAD5g==",
+      "runOrder" : 1,
+      "scriptSourceString" : "cp $CK_OUTPUT_PATH $CK_PROJECT_ROOT\/ovation\/mapbox\/$GEWA_VERSION",
+      "scriptType" : 1,
+      "uuidString" : "63617DBC-E5FD-4519-A846-C15367C38446"
+    },
+    {
+      "enabled" : 1,
+      "name" : "Copy dealer output files to ovation",
+      "predicateDataBase64Encoded" : "YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBoLDBMZISssLzY6P0BDR0tQUVRcYGRpbG1wclUkbnVsbNMNDg8QERJfEBdOU0NvbXBvdW5kUHJlZGljYXRlVHlwZV8QD05TU3VicHJlZGljYXRlc1YkY2xhc3MQAoACgBnSFA8VGFpOUy5vYmplY3RzohYXgAOAFIAY1A8aGxwdHh8gXxARTlNSaWdodEV4cHJlc3Npb25fEBBOU0xlZnRFeHByZXNzaW9uXxATTlNQcmVkaWNhdGVPcGVyYXRvcoATgA6ABIAR1SIjJCUPJicoKSpZTlNPcGVyYW5kXk5TU2VsZWN0b3JOYW1lXxAQTlNFeHByZXNzaW9uVHlwZVtOU0FyZ3VtZW50c4AGgAUQA4AIgA1cdmFsdWVGb3JLZXk60iQPLS4QAYAH0jAxMjNaJGNsYXNzbmFtZVgkY2xhc3Nlc18QEE5TU2VsZkV4cHJlc3Npb26jMjQ1XE5TRXhwcmVzc2lvblhOU09iamVjdNIUDzc5oTiACYAM0w8kOzw9PllOU0tleVBhdGiACxAKgApfEBRpbnB1dEFiYnJldmlhdGVkUGF0aNIwMUFCXxAcTlNLZXlQYXRoU3BlY2lmaWVyRXhwcmVzc2lvbqNBNDXSMDFERV5OU011dGFibGVBcnJheaNERjVXTlNBcnJhedIwMUhJXxATTlNLZXlQYXRoRXhwcmVzc2lvbqRISjQ1XxAUTlNGdW5jdGlvbkV4cHJlc3Npb27TTCQPTU5PXxAPTlNDb25zdGFudFZhbHVlgA8QAIAQXxATL2pzL2dld2EtZGVhbGVycy5qc9IwMVJTXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqNSNDXVD1VWV1hZTlooW1pOU01vZGlmaWVyWE5TTmVnYXRlWU5TT3B0aW9uc15OU09wZXJhdG9yVHlwZYASCBAE0jAxXV5fEBtOU0VxdWFsaXR5UHJlZGljYXRlT3BlcmF0b3KjXV81XxATTlNQcmVkaWNhdGVPcGVyYXRvctIwMWFiXxAVTlNDb21wYXJpc29uUHJlZGljYXRlo2FjNVtOU1ByZWRpY2F0ZdQPGhscHWYfaIATgBWABIAX00wkD2pOT4AWgBBfEBUvY3NzL2dld2EtZGVhbGVycy5jc3PVD1VWV1hZTlooW4ASCNIwMUZxokY10jAxc3RfEBNOU0NvbXBvdW5kUHJlZGljYXRlo3NjNQAIABEAGgAkACkAMgA3AEkATABRAFMAcAB2AH0AlwCpALAAsgC0ALYAuwDGAMkAywDNAM8A2ADsAP8BFQEXARkBGwEdASgBMgFBAVQBYAFiAWQBZgFoAWoBdwF8AX4BgAGFAZABmQGsAbABvQHGAcsBzQHPAdEB2AHiAeQB5gHoAf8CBAIjAicCLAI7Aj8CRwJMAmICZwJ+AoUClwKZApsCnQKzArgC1ALYAuMC7gL3AwEDEAMSAxMDFQMaAzgDPANSA1cDbwNzA38DiAOKA4wDjgOQA5cDmQObA7MDvgPAA8EDxgPJA84D5AAAAAAAAAIBAAAAAAAAAHUAAAAAAAAAAAAAAAAAAAPo",
+      "runOrder" : 0,
+      "scriptSourceString" : "cp $CK_OUTPUT_PATH $CK_PROJECT_ROOT\/ovation\/dealers\/$GEWA_VERSION",
+      "scriptType" : 1,
+      "uuidString" : "5F3CF00A-631A-460F-9146-4D84DC3F6F2F"
+    }
   ],
   "manualImportLinks" : {
 
@@ -1100,6 +1149,7 @@
     "cssoForceMediaMerge" : 0,
     "cssoRestructure" : 1,
     "environmentVariableEntries" : [
+      "GEWA_VERSION:::v3.2.2",
       "NODE_ENV:::production"
     ],
     "esLintConfigFileHandlingType" : 0,

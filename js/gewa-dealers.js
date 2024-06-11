@@ -77,6 +77,9 @@ function renderDealer(map, column) {
     num.replace(/\D/g, '');
     output += `<a href="tel:+1${num}">${column[map.Phone].v}</a> <br />`;
   }
+  if (column[map.Website] != undefined && column[map.Website].v!= null) {
+    output += `<a href="${column[map.Website].v}">${column[map.Website].v}</a> <br />`;
+  }
 
   output += '</div></address>';
 
@@ -112,10 +115,10 @@ function getColMap(table) {
  */
 function sortByState(map, rows) {
   rows.sort((a, b) => {
-    if (a.c[map["State Abb"]].v < b.c[map["State Abb"]].v) {
+    if (a.c[map["State"]].v < b.c[map["State"]].v) {
       return -1;
     }
-    if (a.c[map["State Abb"]].v > b.c[map["State Abb"]].v) {
+    if (a.c[map["State"]].v > b.c[map["State"]].v) {
       return 1;
     }
     return 0;

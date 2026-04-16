@@ -5,8 +5,8 @@
 # variable in CodeKit, and update the CodeKit output paths to shared/v{new}/.
 
 # Define the version strings.
-old_version="v3.2.2"
-new_version="v4.0.0"
+old_version="v4.0.0"
+new_version="v4.0.1"
 
 # Find and rename directories under shared/, but skip .git.
 for file in $(find . -not -path "./.git/*" -type d -name "$old_version"); do

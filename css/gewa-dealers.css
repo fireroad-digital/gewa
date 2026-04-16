@@ -13,13 +13,18 @@
   --gewa-state-text: #FFFFFF;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--gewa-bg);
   font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
   color: var(--gewa-text);
-  margin: 0;
+  margin: 0 auto;
   padding: 0 1rem 2rem;
   box-sizing: border-box;
+  max-width: min(1000px, 100%);
 }
 
 h2 {

@@ -767,7 +767,7 @@
       "oO" : 1,
       "oS" : 1
     },
-    "\/shared\/v4.0.0\/gewa-dealers-min.css" : {
+    "\/shared\/v4.0.1\/gewa-dealers-min.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
@@ -775,22 +775,22 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/shared\/v4.0.0\/gewa-dealers-min-min.css",
+      "oAP" : "\/shared\/v4.0.1\/gewa-dealers-min-min.css",
       "oF" : 1,
       "pg" : 0
     },
-    "\/shared\/v4.0.0\/gewa-dealers-min.js" : {
+    "\/shared\/v4.0.1\/gewa-dealers-min.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/shared\/v4.0.0\/gewa-dealers-min-min.js",
+      "oAP" : "\/shared\/v4.0.1\/gewa-dealers-min-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 0
     },
-    "\/shared\/v4.0.0\/gewa-mapbox-min.css" : {
+    "\/shared\/v4.0.1\/gewa-mapbox-min.css" : {
       "aP" : 1,
       "bl" : 0,
       "ci" : 0,
@@ -798,17 +798,17 @@
       "ft" : 16,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/shared\/v4.0.0\/gewa-mapbox-min-min.css",
+      "oAP" : "\/shared\/v4.0.1\/gewa-mapbox-min-min.css",
       "oF" : 1,
       "pg" : 0
     },
-    "\/shared\/v4.0.0\/gewa-mapbox-min.js" : {
+    "\/shared\/v4.0.1\/gewa-mapbox-min.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/shared\/v4.0.0\/gewa-mapbox-min-min.js",
+      "oAP" : "\/shared\/v4.0.1\/gewa-mapbox-min-min.js",
       "oF" : 1,
       "sC" : 3,
       "tS" : 0
@@ -1143,7 +1143,7 @@
     "cssoForceMediaMerge" : 0,
     "cssoRestructure" : 1,
     "environmentVariableEntries" : [
-      "GEWA_VERSION:::v4.0.0",
+      "GEWA_VERSION:::v4.0.1",
       "NODE_ENV:::production"
     ],
     "esLintConfigFileHandlingType" : 0,

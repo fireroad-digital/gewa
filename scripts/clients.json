@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ovation",
+    "sheetId": "144WlLQQWkf-D2EarT_dayZWzAX9i4xSxZLCHZePDx54",
+    "sheetName": "Ovation",
+    "country": "US",
+    "addressFormat": "split",
+    "columnMap": {
+      "Name": "Name",
+      "Phone": "Phone Number",
+      "AddressLine1": "AddressLine1",
+      "AddressLine2": "AddressLine2",
+      "City": "City",
+      "State": "State",
+      "ZipCode": "Zip Code"
+    }
+  },
+  {
+    "id": "arcus",
+    "sheetId": "144WlLQQWkf-D2EarT_dayZWzAX9i4xSxZLCHZePDx54",
+    "sheetName": "Arcus",
+    "country": "US",
+    "addressFormat": "single",
+    "columnMap": {
+      "Name": "Company Name",
+      "Phone": "Phone",
+      "Address": "Address",
+      "Website": "Website"
+    }
+  },
+  {
+    "id": "musing",
+    "sheetId": "144WlLQQWkf-D2EarT_dayZWzAX9i4xSxZLCHZePDx54",
+    "sheetName": "Müsing",
+    "country": "US",
+    "addressFormat": "single",
+    "columnMap": {
+      "Name": 0,
+      "Phone": "Phone",
+      "Address": "Address",
+      "Website": "website"
+    }
+  }
+]

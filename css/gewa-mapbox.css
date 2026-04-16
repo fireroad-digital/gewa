@@ -1,61 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap');
+
 body {
-   margin: 0;
-   padding: 0;
- }
+  margin: 0;
+  padding: 0;
+}
 
- #map {
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   width: 100%;
- }
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
 
- /* Popup styling */
+/* Popup styling */
 
- .mapboxgl-popup {
-   padding-bottom: 5px;
- }
+.mapboxgl-popup {
+  padding-bottom: 5px;
+}
 
- .mapboxgl-popup-close-button {
-   display: none;
- }
+.mapboxgl-popup-close-button {
+  display: none;
+}
 
- .mapboxgl-popup-content {
-   font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
-   padding: 0;
-   width: 250px;
- }
+.mapboxgl-popup-content {
+  font: 400 14px/1.55 'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  width: 260px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
 
- .mapboxgl-popup-content-wrapper {
-   padding: 1%;
- }
+.mapboxgl-popup-content-wrapper {
+  padding: 0;
+}
 
- .mapboxgl-popup-content h3 {
-   background: rgb(61, 59, 59);
-   text-align: center;
-   color: #fff;
-   margin: 0;
-   display: block;
-   padding: 15px;
-   font-weight: 700;
-   margin-top: -5px;
- }
+.mapboxgl-popup-content h3 {
+  background: #8B6914;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  display: block;
+  padding: 12px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
 
- .mapboxgl-popup-content h4 {
-   margin: 0;
-   display: block;
-   padding: 10px 3px 10px 10px;
-   font-weight: 400;
- }
+.mapboxgl-popup-content h4 {
+  margin: 0;
+  display: block;
+  padding: 8px 12px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #1C1C1C;
+  border-bottom: 1px solid #F0EDE8;
+}
 
- .mapboxgl-container {
-   cursor: pointer;
- }
+.mapboxgl-popup-content h4:last-child {
+  border-bottom: none;
+}
 
- .mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
-   margin-top: 3px;
- }
+.mapboxgl-popup-content h4 a {
+  color: #8B6914;
+  text-decoration: none;
+}
 
- .mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
-   border-bottom-color: rgb(61, 59, 59);
- }
+.mapboxgl-popup-content h4 a:hover {
+  color: #6B5010;
+  text-decoration: underline;
+}
+
+.mapboxgl-container {
+  cursor: pointer;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 3px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: #8B6914;
+}

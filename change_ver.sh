@@ -6,7 +6,7 @@
 
 # Define the version strings.
 old_version="v3.2.2"
-new_version="v3.2.3"
+new_version="v4.0.0"
 
 # Find and rename directories under shared/, but skip .git.
 for file in $(find . -not -path "./.git/*" -type d -name "$old_version"); do

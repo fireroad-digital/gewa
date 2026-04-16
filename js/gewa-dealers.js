@@ -4,123 +4,93 @@
 
 "use strict";
 
-const sheet = 'https://docs.google.com/spreadsheets/d/1OjZjaZGoay1VXQeizjwg67A1Soi9q0ra3EVYmH6-9_Q/gviz/tq?tqx=out:json&sheet=Sheet1'
+var cfg = window.GEWA_CONFIG || {};
 
 $(document).ready(function () {
+  if (cfg.title) {
+    $('h2').text(cfg.title);
+  }
+
   $.ajax({
     type: 'GET',
-    url: sheet,
-    dataType: 'text',
-    success: function (csvData) {
+    url: cfg.dataUrl,
+    dataType: 'json',
+    success: function (data) {
+      let dealers = data.dealers;
 
-      // Extract and parse JSON string.
-      let sheetData = JSON.parse(csvData.substring(47).slice(0, -2))
-      let colMap = getColMap(sheetData.table)
-      sortByState(colMap, sheetData.table.rows);
-      let currentState = "";
-      sheetData.table.rows.forEach((row) => {
-        let abbr = row['c'][colMap['State Abb']].v
-        if (row['c'][colMap["State"]].v != currentState) {
-          currentState = row['c'][colMap["State"]].v;
-          $('#dealers').append(`<div class="state-wrapper clearfix"><h3>${currentState}</h3><div id="state-${abbr}" class="dealers-state"></div></div>`)
+      dealers.sort(function (a, b) {
+        if (a.State < b.State) return -1;
+        if (a.State > b.State) return 1;
+        return 0;
+      });
+
+      let currentState = '';
+      dealers.forEach(function (dealer) {
+        let abbr = dealer.StateAbb;
+        if (dealer.State !== currentState) {
+          currentState = dealer.State;
+          $('#dealers').append(`<div class="state-wrapper clearfix"><h3>${currentState}</h3><div id="state-${abbr}" class="dealers-state"></div></div>`);
         }
-        $(`#state-${abbr}`).append(renderDealer(colMap, row['c']))
-      })
+        $(`#state-${abbr}`).append(renderDealer(dealer));
+      });
 
       // Notify the parent so it can set the iframe height.
       window.parent.postMessage({
         type: 'GEWA_SET_HEIGHT',
-        data: {
-          height: document.body.scrollHeight
-        }
-      },
-      '*')
+        data: { height: document.body.scrollHeight }
+      }, '*');
     }
-  })
-})
+  });
+});
 
 /**
  * Render a single dealer.
  *
- * @param object map
- *   Map of column names to column indexes.
- * @param array column
- *   Array of column values.
+ * @param {object} dealer
+ *   Dealer object from the unified data JSON.
  */
-function renderDealer(map, column) {
-
+function renderDealer(dealer) {
+  let fields = cfg.fields || ['Phone', 'Website'];
   let output = '<address>';
 
-  if (column[map.Name]!= undefined) {
-    output += `<span class="dealer-name">${column[map.Name].v}</span><br />`;
+  if (dealer.Name) {
+    output += `<span class="dealer-name">${dealer.Name}</span><br />`;
   }
-  if (column[map.AddressLine1] != undefined) {
-    output += `${column[map.AddressLine1].v} <br />`;
+  if (dealer.AddressLine1) {
+    output += `${dealer.AddressLine1}<br />`;
   }
-  if (column[map.AddressLine2] != undefined) {
-    output += `${column[map.AddressLine2].v} <br />`;
-  }
-  if (column[map.City] != undefined) {
-    output += `${column[map.City].v}`;
-  }
-  if (column[map["State Abb"]] != undefined) {
-    output += `, ${column[map["State Abb"]].v}`;
-  }
-  if (column[map["Zip Code"]] != undefined) {
-    output += ` ${column[map["Zip Code"]].v}`;
-  }
-  output += `<br />`;
-  if (column[map.Phone] != undefined) {
-
-    // Strip out non-numeric characters for the phone number href.
-    let num = column[map.Phone].v;
-    num.replace(/\D/g, '');
-    output += `<a href="tel:+1${num}">${column[map.Phone].v}</a> <br />`;
-  }
-  if (column[map.Website] != undefined && column[map.Website].v!= null) {
-    output += `<a href="${column[map.Website].v}">${column[map.Website].v}</a> <br />`;
+  if (dealer.AddressLine2) {
+    output += `${dealer.AddressLine2}<br />`;
   }
 
-  output += '</div></address>';
+  let cityLine = '';
+  if (dealer.City) cityLine += dealer.City;
+  if (dealer.StateAbb) cityLine += (cityLine ? ', ' : '') + dealer.StateAbb;
+  if (dealer.ZipCode) cityLine += (cityLine ? ' ' : '') + dealer.ZipCode;
+  if (cityLine) {
+    output += `${cityLine}<br />`;
+  }
 
+  if (fields.includes('Phone') && dealer.Phone) {
+    let num = dealer.Phone.replace(/\D/g, '');
+    output += `<a href="tel:+1${num}">${dealer.Phone}</a><br />`;
+  }
+  if (fields.includes('Website') && dealer.Website && dealer.Website.length > 0) {
+    dealer.Website.forEach(function (site) {
+      if (site) {
+        output += `<a href="${ensureHttp(site)}">${site}</a><br />`;
+      }
+    });
+  }
+  if (fields.includes('Email') && dealer.Email) {
+    output += `<a href="mailto:${dealer.Email}">${dealer.Email}</a><br />`;
+  }
+
+  output += '</address>';
   return output;
 }
 
-/**
- * Get map of column names to indexes.
- *
- * @param table
- *   Table data from Google Sheets JSON.
- *
- * @returns object
- *   Object mapping column labels to indexes.
- */
-function getColMap(table) {
-  let colMap = {};
-  for (let i = 0; i < table.cols.length; i++) {
-    colMap[table.cols[i].label] = i
-  }
-  return colMap
-}
-
-/**
- * Sort an array of Google Sheets rows by state.
- *
- * Note that states are sorted by abbreviation and not full name.
- *
- * @param object map
- *   Map of column names to column indexes.
- * @param {*} rows
- *   Array of rows from Google Sheets JSON.
- */
-function sortByState(map, rows) {
-  rows.sort((a, b) => {
-    if (a.c[map["State"]].v < b.c[map["State"]].v) {
-      return -1;
-    }
-    if (a.c[map["State"]].v > b.c[map["State"]].v) {
-      return 1;
-    }
-    return 0;
-  });
+function ensureHttp(url) {
+  if (!url) return '#';
+  return /^https?:\/\//i.test(url) ? url : 'https://' + url;
 }

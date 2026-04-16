@@ -1,0 +1,259 @@
+{
+  "network": "musing",
+  "updatedAt": "2026-04-15T22:37:36.799Z",
+  "dealers": [
+    {
+      "Name": "Anderson Violins",
+      "AddressLine1": "210 Yale Avenue, Swarthmore, PA 19081",
+      "AddressLine2": null,
+      "Address": "210 Yale Avenue, Swarthmore, PA 19081, Swarthmore, PA 19081",
+      "City": "Swarthmore",
+      "State": "Pennsylvania",
+      "StateAbb": "PA",
+      "ZipCode": "19081",
+      "Phone": "610-328-6448",
+      "Website": [
+        "www.andersonviolins.com"
+      ],
+      "Latitude": 39.8997935,
+      "Longitude": -75.3417994,
+      "_addressHash": "00a0d6998ee9"
+    },
+    {
+      "Name": "J.S. Fisher Violins",
+      "AddressLine1": "400 Brittany Ln, Mount Joy, PA 17552-1157",
+      "AddressLine2": null,
+      "Address": "400 Brittany Ln, Mount Joy, PA 17552-1157, Mount Joy, PA 17552",
+      "City": "Mount Joy",
+      "State": "Pennsylvania",
+      "StateAbb": "PA",
+      "ZipCode": "17552",
+      "Phone": "800-372-4151",
+      "Website": [
+        "www.fisherviolins.com"
+      ],
+      "Latitude": 40.119182,
+      "Longitude": -76.529718,
+      "_addressHash": "f6d625b3e1b6"
+    },
+    {
+      "Name": "Foxes Music Company",
+      "AddressLine1": "416 S Washington St, Falls Church, VA 22046",
+      "AddressLine2": null,
+      "Address": "416 S Washington St, Falls Church, VA 22046, Falls Church, VA 22046",
+      "City": "Falls Church",
+      "State": "Virginia",
+      "StateAbb": "VA",
+      "ZipCode": "22046",
+      "Phone": "703-533-7393",
+      "Website": [
+        "www.foxesmusic.com"
+      ],
+      "Latitude": 38.8802117,
+      "Longitude": -77.1752977,
+      "_addressHash": "8cdfee882651"
+    },
+    {
+      "Name": "Griggs Music",
+      "AddressLine1": "3849 Brady Street, Davenport, IA 52806",
+      "AddressLine2": null,
+      "Address": "3849 Brady Street, Davenport, IA 52806, Davenport, IA 52806",
+      "City": "Davenport",
+      "State": "Iowa",
+      "StateAbb": "IA",
+      "ZipCode": "52806",
+      "Phone": "877-391-9001",
+      "Website": [
+        "www.griggsmusic.com"
+      ],
+      "Latitude": 41.5593987,
+      "Longitude": -90.5682251,
+      "_addressHash": "d823dad437f0"
+    },
+    {
+      "Name": "Hollinger Violins",
+      "AddressLine1": "5075 Lupine Rd, Missoula, MT 59803",
+      "AddressLine2": null,
+      "Address": "5075 Lupine Rd, Missoula, MT 59803, MT 59803",
+      "City": null,
+      "State": "Montana",
+      "StateAbb": "MT",
+      "ZipCode": "59803",
+      "Phone": "406-542-2012",
+      "Website": [
+        "www.hollingerviolins.com"
+      ],
+      "Latitude": 46.8223178,
+      "Longitude": -113.9600408,
+      "_addressHash": "0d7b77759427"
+    },
+    {
+      "Name": "Ifshin Violins",
+      "AddressLine1": "6420 Fairmount Ave, El Cerrito, CA 94530",
+      "AddressLine2": null,
+      "Address": "6420 Fairmount Ave, El Cerrito, CA 94530, El Cerrito, CA 94530",
+      "City": "El Cerrito",
+      "State": "California",
+      "StateAbb": "CA",
+      "ZipCode": "94530",
+      "Phone": "510-277-3728",
+      "Website": [
+        "www.ifshinviolins.com"
+      ],
+      "Latitude": 37.900873,
+      "Longitude": -122.3010512,
+      "_addressHash": "20914aa4b766"
+    },
+    {
+      "Name": "Metzler Violin Shop",
+      "AddressLine1": "604 S Central Ave, Glendale, CA 91204",
+      "AddressLine2": null,
+      "Address": "604 S Central Ave, Glendale, CA 91204, Glendale, CA 91204",
+      "City": "Glendale",
+      "State": "California",
+      "StateAbb": "CA",
+      "ZipCode": "91204",
+      "Phone": "818-246-0278",
+      "Website": [
+        "www.metzlerviolins.com"
+      ],
+      "Latitude": 34.138868,
+      "Longitude": -118.257761,
+      "_addressHash": "6b1417bda87d"
+    },
+    {
+      "Name": "John Osnes Violins",
+      "AddressLine1": "8900 Jupiter Dr, Anchorage, AK 99507",
+      "AddressLine2": null,
+      "Address": "8900 Jupiter Dr, Anchorage, AK 99507, Anchorage, AK 99507",
+      "City": "Anchorage",
+      "State": "Alaska",
+      "StateAbb": "AK",
+      "ZipCode": "99507",
+      "Phone": "907-346-3609",
+      "Website": [
+        "www.osnesviolins.com"
+      ],
+      "Latitude": 61.1409829,
+      "Longitude": -149.7969388,
+      "_addressHash": "d38291a666e9"
+    },
+    {
+      "Name": "Quinn Violins",
+      "AddressLine1": "1081 21st Avenue SE, Minneapolis, MN 55414",
+      "AddressLine2": null,
+      "Address": "1081 21st Avenue SE, Minneapolis, MN 55414, Minneapolis, MN 55414",
+      "City": "Minneapolis",
+      "State": "Minnesota",
+      "StateAbb": "MN",
+      "ZipCode": "55414",
+      "Phone": "888-521-2225",
+      "Website": [
+        "www.quinnviolins.com"
+      ],
+      "Latitude": 44.989806,
+      "Longitude": -93.222939,
+      "_addressHash": "a10f24c6feaa"
+    },
+    {
+      "Name": "Fiddlershop.com",
+      "AddressLine1": "1550 SW 13th Ct, Pompano Beach, FL 33069",
+      "AddressLine2": null,
+      "Address": "1550 SW 13th Ct, Pompano Beach, FL 33069, Pompano Beach, FL 33069",
+      "City": "Pompano Beach",
+      "State": "Florida",
+      "StateAbb": "FL",
+      "ZipCode": "33069",
+      "Phone": "954-530-5999",
+      "Website": [
+        "www.fiddlershop.com"
+      ],
+      "Latitude": 26.2133836,
+      "Longitude": -80.1462923,
+      "_addressHash": "8b324209d69d"
+    },
+    {
+      "Name": "Telford & Sons Violins",
+      "AddressLine1": "4910 W Gage St, Boise, ID 83706",
+      "AddressLine2": null,
+      "Address": "4910 W Gage St, Boise, ID 83706, Boise, ID 83706",
+      "City": "Boise",
+      "State": "Idaho",
+      "StateAbb": "ID",
+      "ZipCode": "83706",
+      "Phone": "208-344-6392",
+      "Website": [
+        "www.telfordviolins.com"
+      ],
+      "Latitude": 43.613924,
+      "Longitude": -116.2425628,
+      "_addressHash": "64e3954df972"
+    },
+    {
+      "Name": "Vermont Violins",
+      "AddressLine1": "24 Main Street, Montpelier, VT 05602",
+      "AddressLine2": null,
+      "Address": "24 Main Street, Montpelier, VT 05602, Montpelier, VT 05602",
+      "City": "Montpelier",
+      "State": "Vermont",
+      "StateAbb": "VT",
+      "ZipCode": "05602",
+      "Phone": "802-229-4503",
+      "Website": [
+        "www.vermontviolins.com"
+      ],
+      "Latitude": 44.2590375,
+      "Longitude": -72.5765177,
+      "_addressHash": "9afdf8650db3"
+    },
+    {
+      "Name": "Voss Violins",
+      "AddressLine1": "B620 Glen Iris Dr NE #104, Atlanta, GA 30308",
+      "AddressLine2": null,
+      "Address": "B620 Glen Iris Dr NE #104, Atlanta, GA 30308, Atlanta, GA 30312",
+      "City": "Atlanta",
+      "State": "Georgia",
+      "StateAbb": "GA",
+      "ZipCode": "30312",
+      "Phone": "404-876-8617",
+      "Website": [
+        "www.vossviolins.com"
+      ],
+      "Latitude": 33.7723168,
+      "Longitude": -84.3676817,
+      "_addressHash": "70d8722af7f8"
+    },
+    {
+      "Name": "Von's Violin Shop",
+      "AddressLine1": "6740 E Hampden Ave Suite #103, Denver, CO 80224",
+      "AddressLine2": null,
+      "Address": "6740 E Hampden Ave Suite #103, Denver, CO 80224, Denver, CO 80224",
+      "City": "Denver",
+      "State": "Colorado",
+      "StateAbb": "CO",
+      "ZipCode": "80224",
+      "Phone": "303-778-1349",
+      "Website": [
+        "www.vonsviolinshop.com"
+      ],
+      "Latitude": 39.6526378,
+      "Longitude": -104.9104353,
+      "_addressHash": "cf15ec0ff212"
+    },
+    {
+      "Name": "Baker Violin Shop",
+      "AddressLine1": "573 Dutton Farm Rd, Dummerston, VT 05301",
+      "AddressLine2": null,
+      "Address": "573 Dutton Farm Rd, Dummerston, VT 05301, Dummerston, VT 05301",
+      "City": "Dummerston",
+      "State": "Vermont",
+      "StateAbb": "VT",
+      "ZipCode": "05301",
+      "Phone": "802-254-4425",
+      "Website": [],
+      "Latitude": 42.9224625,
+      "Longitude": -72.5706787,
+      "_addressHash": "ac111eac3dfe"
+    }
+  ]
+}

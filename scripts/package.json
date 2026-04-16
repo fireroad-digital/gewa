@@ -1,0 +1,13 @@
+{
+  "name": "gewa-geocode",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Geocoding script for GEWA dealer data",
+  "main": "geocode.js",
+  "scripts": {
+    "geocode": "node geocode.js"
+  },
+  "dependencies": {
+    "open-location-code": "^1.0.3"
+  }
+}

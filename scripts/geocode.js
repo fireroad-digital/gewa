@@ -444,6 +444,10 @@ async function processClient(client, existingData) {
     if (addressFormat === 'split') {
       addressLine1 = getCol(row, headers, columnMap, 'AddressLine1');
       addressLine2 = getCol(row, headers, columnMap, 'AddressLine2');
+    } else {
+      // For single-format, AddressLine1 holds only the street so the render
+      // function can append City/StateAbb/ZipCode as a separate line.
+      addressLine1 = parseAddressString(rawAddress).street || rawAddress;
     }
 
     const phone = getCol(row, headers, columnMap, 'Phone').trim();

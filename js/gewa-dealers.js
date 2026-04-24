@@ -98,3 +98,5 @@ function ensureHttp(url) {
   if (!url) return '#';
   return /^https?:\/\//i.test(url) ? url : 'https://' + url;
 }
+
+if (typeof module !== 'undefined') module.exports = { renderDealer, ensureHttp, cfg };

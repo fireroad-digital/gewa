@@ -157,6 +157,28 @@ Common causes of geocoding failure:
 
 ---
 
+## Testing
+
+### Data validation
+
+Validates all `data/*.json` files for structural correctness before committing. Catches missing coordinates, mismatched state abbreviations, duplicate address hashes, and malformed fields.
+
+```bash
+npm run validate
+```
+
+The daily geocoding GitHub Action runs this automatically after the geocoding step. If validation fails, the data is **not committed** and a Slack alert is sent. Exit code 0 = clean, 1 = failures.
+
+### Unit tests
+
+Tests the pure JavaScript functions in the widget source files (`renderDealer`, `dealersToGeoJSON`, `ensureHttp`). Uses Node's built-in test runner — no dependencies required.
+
+```bash
+npm test
+```
+
+---
+
 ## Build Process
 
 **Build tool:** [CodeKit 3](https://codekitapp.com/) (Mac GUI app — no npm/webpack).

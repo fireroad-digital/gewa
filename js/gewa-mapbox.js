@@ -97,35 +97,8 @@ $(document).ready(function () {
     map.fitBounds(bbox, { padding: 50 });
   }
 
-  /**
-   * Convert dealer array to GeoJSON and set up the map.
-   *
-   * @param {Array} dealers
-   *   Dealer objects from the unified data JSON.
-   */
   function makeGeoJSON(dealers) {
-    var features = dealers
-      .filter(function (d) { return d.Latitude != null && d.Longitude != null; })
-      .map(function (d) {
-        return {
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: [d.Longitude, d.Latitude]
-          },
-          properties: {
-            Name: d.Name,
-            Address: d.Address,
-            PlusCode: d.PlusCode || '',
-            Phone: d.Phone || '',
-            // Arrays can't be stored directly in GeoJSON properties; serialize.
-            Website: d.Website && d.Website.length ? JSON.stringify(d.Website) : ''
-          }
-        };
-      });
-
-    var geojson = { type: 'FeatureCollection', features: features };
-
+    var geojson = dealersToGeoJSON(dealers);
     if (loaded) {
       setupMap(geojson);
     } else {
@@ -135,6 +108,38 @@ $(document).ready(function () {
     }
   }
 });
+
+/**
+ * Convert a dealer array to a GeoJSON FeatureCollection.
+ * Dealers without coordinates are excluded.
+ *
+ * @param {Array} dealers
+ * @returns {object} GeoJSON FeatureCollection
+ */
+function dealersToGeoJSON(dealers) {
+  var features = dealers
+    .filter(function (d) { return d.Latitude != null && d.Longitude != null; })
+    .map(function (d) {
+      return {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [d.Longitude, d.Latitude]
+        },
+        properties: {
+          Name: d.Name,
+          Address: d.Address,
+          PlusCode: d.PlusCode || '',
+          Phone: d.Phone || '',
+          // Arrays can't be stored directly in GeoJSON properties; serialize.
+          Website: d.Website && d.Website.length ? JSON.stringify(d.Website) : ''
+        }
+      };
+    });
+  return { type: 'FeatureCollection', features: features };
+}
+
+if (typeof module !== 'undefined') module.exports = { dealersToGeoJSON, ensureHttp };
 
 function ensureHttp(url) {
   if (!url) return '#';

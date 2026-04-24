@@ -25,6 +25,19 @@ jobs:
       - name: Run geocoding script
         run: node scripts/geocode.js
 
+      - name: Validate dealer data
+        id: validate
+        run: node scripts/validate-data.js
+
+      - name: Alert Slack on validation failure
+        if: failure() && steps.validate.outcome == 'failure'
+        run: |
+          curl -s -X POST "${{ secrets.SLACK_WEBHOOK_URL }}" \
+            -H 'Content-type: application/json' \
+            -d '{
+              "text": ":warning: *GEWA geocoding validation failed* — dealer data was NOT committed.\nCheck the workflow run for details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            }'
+
       - name: Commit updated dealer data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

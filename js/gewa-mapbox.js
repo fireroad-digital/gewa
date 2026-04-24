@@ -22,6 +22,7 @@ $(document).ready(function () {
     type: 'GET',
     url: cfg.dataUrl,
     dataType: 'json',
+    cache: false,
     success: function (data) { makeGeoJSON(data.dealers); }
   });
 

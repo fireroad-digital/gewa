@@ -57,6 +57,9 @@ $(document).ready(function () {
       let description = `<h3>${props.Name}</h3>`;
       description += `<h4><a target='_blank' href='${url}'>Directions</a></h4>`;
       description += `<h4><b>Address:</b> ${address}</h4>`;
+      if (props.PlusCode) {
+        description += `<h4 class="plus-code"><b>Plus Code:</b> ${props.PlusCode}</h4>`;
+      }
       if (props.Phone) {
         description += `<h4><b>Phone:</b> ${props.Phone}</h4>`;
       }
@@ -112,6 +115,7 @@ $(document).ready(function () {
           properties: {
             Name: d.Name,
             Address: d.Address,
+            PlusCode: d.PlusCode || '',
             Phone: d.Phone || '',
             // Arrays can't be stored directly in GeoJSON properties; serialize.
             Website: d.Website && d.Website.length ? JSON.stringify(d.Website) : ''

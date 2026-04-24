@@ -70,6 +70,9 @@ function renderDealer(dealer) {
   if (cityLine) {
     output += `${cityLine}<br />`;
   }
+  if (dealer.PlusCode) {
+    output += `<small class="plus-code">Plus Code: ${dealer.PlusCode}</small><br />`;
+  }
 
   if (fields.includes('Phone') && dealer.Phone) {
     let num = dealer.Phone.replace(/\D/g, '');

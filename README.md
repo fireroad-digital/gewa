@@ -169,11 +169,9 @@ Common causes of geocoding failure:
 
 1. Edit `old_version` and `new_version` in `change_ver.sh`
 2. Run `./change_ver.sh` — renames `shared/v{old}/` and updates all HTML asset references
-3. In CodeKit, update the `GEWA_VERSION` environment variable and the output paths to `shared/v{new}/`
+3. In CodeKit, update the `GEWA_VERSION` environment variable (Project Settings => Environment Variables)
 4. Rebuild in CodeKit
 5. Commit and push
-
-**Current version:** v3.2.2
 
 ---
 

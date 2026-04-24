@@ -1,6 +1,6 @@
 {
   "network": "arcus",
-  "updatedAt": "2026-04-15T22:43:11.125Z",
+  "updatedAt": "2026-04-24T15:14:44.649Z",
   "dealers": [
     {
       "Name": "Anderson Violins",
@@ -38,13 +38,13 @@
     },
     {
       "Name": "Brobst Violin Shop",
-      "AddressLine1": "RR2P+3G Alexandria, Virginia",
+      "AddressLine1": "5586 General Washington Drive",
       "AddressLine2": null,
-      "Address": "Alexandria, Virginia, Alexandria, VA",
+      "Address": "5586 General Washington Drive, Alexandria, VA 22312",
       "City": "Alexandria",
       "State": "Virginia",
       "StateAbb": "VA",
-      "ZipCode": null,
+      "ZipCode": "22312",
       "Phone": "703-256-0566",
       "Website": [
         "www.brobstviolinshop.com"
@@ -52,6 +52,7 @@
       "Latitude": 38.80018750000001,
       "Longitude": -77.16368750000001,
       "_addressHash": "9800bb6be161",
+      "PlusCode": "RR2P+3G",
       "_geocodeNote": "Geocoded via Plus Code — precise"
     },
     {
@@ -90,13 +91,13 @@
     },
     {
       "Name": "Day Violins",
-      "AddressLine1": "VHP7+Q9 Chantilly, Virginia",
+      "AddressLine1": "14221 Willard Road",
       "AddressLine2": null,
-      "Address": "Chantilly, Virginia, Chantilly, VA",
+      "Address": "14221 Willard Road, Chantilly, VA 20151",
       "City": "Chantilly",
       "State": "Virginia",
       "StateAbb": "VA",
-      "ZipCode": null,
+      "ZipCode": "20151",
       "Phone": "703-391-9444",
       "Website": [
         "www.dayviolins.com"
@@ -104,6 +105,7 @@
       "Latitude": 38.8869375,
       "Longitude": -77.43656250000001,
       "_addressHash": "87c620b94afc",
+      "PlusCode": "VHP7+Q9",
       "_geocodeNote": "Geocoded via Plus Code — precise"
     },
     {
@@ -193,13 +195,13 @@
     },
     {
       "Name": "Cellos2Go",
-      "AddressLine1": "4425+33 Columbia, South Carolina",
+      "AddressLine1": "98 Sand Spur Road",
       "AddressLine2": null,
-      "Address": "Columbia, South Carolina, Columbia, SC",
-      "City": "Columbia",
+      "Address": "98 Sand Spur Road, SC 29223",
+      "City": null,
       "State": "South Carolina",
       "StateAbb": "SC",
-      "ZipCode": null,
+      "ZipCode": "29223",
       "Phone": "518-527-5789",
       "Website": [
         "www.cellos2go.com"
@@ -207,6 +209,7 @@
       "Latitude": 34.10018749999999,
       "Longitude": -80.89231250000002,
       "_addressHash": "b48488cc0bc3",
+      "PlusCode": "4425+33",
       "_geocodeNote": "Geocoded via Plus Code — precise"
     },
     {
@@ -433,13 +436,13 @@
     },
     {
       "Name": "Sam's Strings Violin Shop",
-      "AddressLine1": "Q7H2+G7 Katy, Texas",
+      "AddressLine1": "433 Park Grove Drive",
       "AddressLine2": null,
-      "Address": "Katy, Texas, Katy, TX",
-      "City": "Katy",
+      "Address": "433 Park Grove Drive, TX 77450",
+      "City": null,
       "State": "Texas",
       "StateAbb": "TX",
-      "ZipCode": null,
+      "ZipCode": "77450",
       "Phone": "713-257-0459",
       "Website": [
         "www.samsstrings.com"
@@ -447,6 +450,7 @@
       "Latitude": 29.7788125,
       "Longitude": -95.7493125,
       "_addressHash": "af27d5b0fda5",
+      "PlusCode": "Q7H2+G7",
       "_geocodeNote": "Geocoded via Plus Code — precise"
     },
     {
@@ -519,13 +523,13 @@
     },
     {
       "Name": "Studio Strings",
-      "AddressLine1": "56H5+Q6 Weymouth, Medina Township, OH",
+      "AddressLine1": "3514 Nichols Road",
       "AddressLine2": null,
-      "Address": "Weymouth, Medina Township, OH, OH 44211",
+      "Address": "3514 Nichols Road, OH 44256",
       "City": null,
       "State": "Ohio",
       "StateAbb": "OH",
-      "ZipCode": "44211",
+      "ZipCode": "44256",
       "Phone": "330-336-1644",
       "Website": [
         "www.studiostringsonline.com"
@@ -533,6 +537,7 @@
       "Latitude": 41.17943750000002,
       "Longitude": -81.7919375,
       "_addressHash": "1d05163269f0",
+      "PlusCode": "56H5+Q6",
       "_geocodeNote": "Geocoded via Plus Code — precise"
     },
     {

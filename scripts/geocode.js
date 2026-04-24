@@ -196,6 +196,28 @@ async function nominatimStructured({ street, city, state, postalcode, country })
 }
 
 /**
+ * Reverse-geocode a lat/lon via Nominatim.
+ * Returns { lat, lon, nominatimAddress } or null.
+ */
+async function nominatimReverse(lat, lon) {
+  const params = new URLSearchParams({ lat, lon, format: 'jsonv2', addressdetails: '1' });
+  const url = `https://nominatim.openstreetmap.org/reverse?${params}`;
+  try {
+    const body = await fetchUrl(url);
+    const result = JSON.parse(body);
+    if (result.error) return null;
+    return {
+      lat: parseFloat(result.lat),
+      lon: parseFloat(result.lon),
+      nominatimAddress: result.address
+    };
+  } catch (e) {
+    console.warn(`  Nominatim reverse error: ${e.message}`);
+    return null;
+  }
+}
+
+/**
  * Query Nominatim with a free-text query string.
  */
 async function nominatimFreetext(query, country) {
@@ -242,10 +264,14 @@ async function geocodeAddress({ addressFormat, rawAddress, city, state, zip, cou
     try {
       const fullCode = olc.recoverNearest(plusCode.shortCode, ref.lat, ref.lon);
       const decoded = olc.decode(fullCode);
+      const lat = decoded.latitudeCenter;
+      const lon = decoded.longitudeCenter;
+      await sleep(NOMINATIM_DELAY_MS);
+      const rev = await nominatimReverse(lat, lon);
       return {
-        lat: decoded.latitudeCenter,
-        lon: decoded.longitudeCenter,
-        nominatimAddress: ref.nominatimAddress,
+        lat,
+        lon,
+        nominatimAddress: rev ? rev.nominatimAddress : ref.nominatimAddress,
         geocodeNote: 'Geocoded via Plus Code — precise'
       };
     } catch (e) {
@@ -425,8 +451,11 @@ async function processClient(client, existingData) {
     const websites = normalizeWebsite(websiteRaw);
 
     // Check if we already have geocoding for this address.
+    // Bypass the cache if the source is a Plus Code but the cached AddressLine1 is still
+    // the raw Plus Code — that means the reverse-geocode step hasn't run yet.
     const cached = existingByHash[hash];
-    if (cached && cached.Latitude != null) {
+    const cachedPlusCodeUnresolved = cached && detectPlusCode(rawAddress) && detectPlusCode(cached.AddressLine1 || '');
+    if (cached && cached.Latitude != null && !cachedPlusCodeUnresolved) {
       dealers.push({ ...cached, Name: name, Phone: phone, Website: websites });
       skipped++;
       continue;
@@ -463,12 +492,21 @@ async function processClient(client, existingData) {
 
     // Assemble the full one-line address for the map popup / directions link.
     let fullAddress;
+    const isPlusCode = !!detectPlusCode(rawAddress);
     if (addressFormat === 'split') {
       fullAddress = rawAddress;
     } else if (geo && geo.nominatimAddress) {
       const na = geo.nominatimAddress;
-      const parts = [addressLine1.replace(/^[^,]+\+[^\s]+\s+/, ''), na.city || na.town || na.village || '', `${stateAbbVal || ''} ${na.postcode || ''}`.trim()].filter(Boolean);
-      fullAddress = parts.join(', ');
+      if (isPlusCode && na.road) {
+        const street = [na.house_number, na.road].filter(Boolean).join(' ');
+        const cityPart = na.city || na.town || na.village || '';
+        const parts = [street, cityPart, `${stateAbbVal || ''} ${na.postcode || ''}`.trim()].filter(Boolean);
+        fullAddress = parts.join(', ');
+        addressLine1 = street;
+      } else {
+        const parts = [addressLine1.replace(/^[^,]+\+[^\s]+\s+/, ''), na.city || na.town || na.village || '', `${stateAbbVal || ''} ${na.postcode || ''}`.trim()].filter(Boolean);
+        fullAddress = parts.join(', ');
+      }
     } else {
       fullAddress = rawAddress;
     }
@@ -488,6 +526,10 @@ async function processClient(client, existingData) {
       Longitude: geo ? geo.lon : null,
       _addressHash: hash
     };
+
+    if (isPlusCode) {
+      dealer.PlusCode = detectPlusCode(rawAddress).shortCode;
+    }
 
     if (!geo) {
       dealer._geocodeFailed = true;

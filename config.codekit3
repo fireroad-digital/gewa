@@ -481,6 +481,14 @@
       "oAP" : "\/.gitpod\/project-setup.sh",
       "oF" : 0
     },
+    "\/.vscode\/settings.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/.vscode\/settings-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/arcus\/dealers\/gewa-dealers-arcus.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -489,12 +497,28 @@
       "oAP" : "\/arcus\/dealers\/gewa-dealers-arcus.html",
       "oF" : 0
     },
+    "\/arcus\/dealers\/gewa-dealers-local.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/arcus\/dealers\/gewa-dealers-local.html",
+      "oF" : 0
+    },
     "\/arcus\/mapbox\/gewa-mapbox-arcus.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/arcus\/mapbox\/gewa-mapbox-arcus.html",
+      "oF" : 0
+    },
+    "\/arcus\/mapbox\/gewa-mapbox-local.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/arcus\/mapbox\/gewa-mapbox-local.html",
       "oF" : 0
     },
     "\/change_ver.sh" : {
@@ -648,12 +672,28 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/musing\/dealers\/gewa-dealers-local.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/musing\/dealers\/gewa-dealers-local.html",
+      "oF" : 0
+    },
     "\/musing\/dealers\/gewa-dealers-musing.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/musing\/dealers\/gewa-dealers-musing.html",
+      "oF" : 0
+    },
+    "\/musing\/mapbox\/gewa-mapbox-local.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/musing\/mapbox\/gewa-mapbox-local.html",
       "oF" : 0
     },
     "\/musing\/mapbox\/gewa-mapbox-musing.html" : {
@@ -694,6 +734,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/ovation\/mapbox\/gewa-mapbox-ovation.html",
+      "oF" : 0
+    },
+    "\/README.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/README.html",
       "oF" : 0
     },
     "\/README.md" : {
@@ -1143,7 +1191,7 @@
     "cssoForceMediaMerge" : 0,
     "cssoRestructure" : 1,
     "environmentVariableEntries" : [
-      "GEWA_VERSION:::v4.0.1",
+      "GEWA_VERSION:::v4.0.2",
       "NODE_ENV:::production"
     ],
     "esLintConfigFileHandlingType" : 0,

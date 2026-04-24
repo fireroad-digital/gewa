@@ -5,8 +5,8 @@
 # variable in CodeKit, and update the CodeKit output paths to shared/v{new}/.
 
 # Define the version strings.
-old_version="v4.0.0"
-new_version="v4.0.1"
+old_version="v4.0.1"
+new_version="v4.0.2"
 
 # Find and rename directories under shared/, but skip .git.
 for file in $(find . -not -path "./.git/*" -type d -name "$old_version"); do
@@ -16,4 +16,4 @@ done
 # Find and replace the version string in all HTML files recursively.
 find . -type f -name "*.html" -exec sed -i '' -e "s|/shared/$old_version/|/shared/$new_version/|g" {} +
 
-echo "Change complete. Also update GEWA_VERSION in CodeKit and change the output paths to shared/$new_version/."
+echo "Change complete. Also update GEWA_VERSION in CodeKit => Project Settings => Environment Variables."

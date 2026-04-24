@@ -110,3 +110,9 @@ address a:hover {
   color: var(--gewa-accent-dark);
   text-decoration: underline;
 }
+
+.plus-code {
+  color: var(--gewa-muted);
+  font-size: 0.8em;
+  opacity: 0.75;
+}

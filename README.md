@@ -173,8 +173,6 @@ Common causes of geocoding failure:
 4. Rebuild in CodeKit
 5. Commit and push
 
-**Current version:** v3.2.2
-
 ---
 
 ## Widget Configuration Reference

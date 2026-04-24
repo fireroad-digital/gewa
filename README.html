@@ -298,6 +298,63 @@ node geocode.js ovation     # single brand
 
 <hr />
 
+<h2 id="cachinganddatafreshness">Caching and Data Freshness</h2>
+
+<p>When the daily workflow commits updated dealer data to the <code>release</code> branch, changes propagate through three layers before end users see them:</p>
+
+<table>
+<colgroup>
+<col />
+<col />
+<col />
+</colgroup>
+
+<thead>
+<tr>
+	<th> Layer </th>
+	<th> TTL / delay </th>
+	<th> Controllable? </th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td> GitHub Pages rebuild </td>
+	<td> <sub>1–2</sub> min after commit </td>
+	<td> No — Pages rebuilds automatically </td>
+</tr>
+<tr>
+	<td> GitHub Pages CDN (<code>max-age=600</code>) </td>
+	<td> Up to 10 min </td>
+	<td> No — GitHub sets these headers </td>
+</tr>
+<tr>
+	<td> Browser cache </td>
+	<td> Bypassed on every request </td>
+	<td> <strong>Yes — handled in widget JS</strong> </td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="whatwecontrol">What we control</h3>
+
+<p>Both widgets pass <code>cache: false</code> to <code>$.ajax</code>, which appends a <code>?_={timestamp}</code> query parameter on every request. This prevents the browser from ever serving a stale cached response — the browser always asks the CDN for a fresh copy.</p>
+
+<h3 id="whatwecantcontrol">What we can&#8217;t control</h3>
+
+<p>The GitHub Pages CDN caches responses for up to 10 minutes regardless of the <code>cache: false</code> flag (that flag only affects the browser&#8217;s own cache, not upstream caches). This means after a daily data commit there is an unavoidable window of up to <sub>12</sub> minutes (Pages rebuild + CDN TTL) before all users see the updated data. For dealer listings that change at most once a day, this is acceptable.</p>
+
+<h3 id="ifyouneedtoverifydataislive">If you need to verify data is live</h3>
+
+<p>Check the raw JSON URL directly before testing the widgets:</p>
+
+<pre><code>https://fireroad-digital.github.io/gewa/data/ovation.json
+</code></pre>
+
+<p>If that URL still returns old data, the CDN hasn&#8217;t refreshed yet — wait a few minutes and try again. Once it returns the new data, the widgets will reflect it on the next page load.</p>
+
+<hr />
+
 <h2 id="iframeembedding">Iframe Embedding</h2>
 
 <p>The client embeds the widgets on their site like this:</p>

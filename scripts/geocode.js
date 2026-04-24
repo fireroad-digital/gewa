@@ -504,8 +504,9 @@ async function processClient(client, existingData) {
         fullAddress = parts.join(', ');
         addressLine1 = street;
       } else {
-        const parts = [addressLine1.replace(/^[^,]+\+[^\s]+\s+/, ''), na.city || na.town || na.village || '', `${stateAbbVal || ''} ${na.postcode || ''}`.trim()].filter(Boolean);
-        fullAddress = parts.join(', ');
+        // Single-format: raw address already contains city/state/zip — use it as-is.
+        // Nominatim is only used for lat/lng, not to reconstruct the display address.
+        fullAddress = rawAddress;
       }
     } else {
       fullAddress = rawAddress;

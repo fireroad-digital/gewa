@@ -196,6 +196,36 @@ Both widgets read `window.GEWA_CONFIG` set in the HTML file before the widget sc
 
 ---
 
+## Caching and Data Freshness
+
+When the daily workflow commits updated dealer data to the `release` branch, changes propagate through three layers before end users see them:
+
+| Layer | TTL / delay | Controllable? |
+|-------|-------------|---------------|
+| GitHub Pages rebuild | ~1–2 min after commit | No — Pages rebuilds automatically |
+| GitHub Pages CDN (`max-age=600`) | Up to 10 min | No — GitHub sets these headers |
+| Browser cache | Bypassed on every request | **Yes — handled in widget JS** |
+
+### What we control
+
+Both widgets pass `cache: false` to `$.ajax`, which appends a `?_={timestamp}` query parameter on every request. This prevents the browser from ever serving a stale cached response — the browser always asks the CDN for a fresh copy.
+
+### What we can't control
+
+The GitHub Pages CDN caches responses for up to 10 minutes regardless of the `cache: false` flag (that flag only affects the browser's own cache, not upstream caches). This means after a daily data commit there is an unavoidable window of up to ~12 minutes (Pages rebuild + CDN TTL) before all users see the updated data. For dealer listings that change at most once a day, this is acceptable.
+
+### If you need to verify data is live
+
+Check the raw JSON URL directly before testing the widgets:
+
+```
+https://fireroad-digital.github.io/gewa/data/ovation.json
+```
+
+If that URL still returns old data, the CDN hasn't refreshed yet — wait a few minutes and try again. Once it returns the new data, the widgets will reflect it on the next page load.
+
+---
+
 ## Iframe Embedding
 
 The client embeds the widgets on their site like this:

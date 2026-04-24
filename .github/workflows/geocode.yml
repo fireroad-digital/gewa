@@ -12,6 +12,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: release
 
       - uses: actions/setup-node@v4
         with:
@@ -28,5 +30,6 @@ jobs:
         with:
           commit_message: 'chore: update geocoded dealer data'
           file_pattern: 'data/*.json'
+          branch: release
           commit_user_name: 'github-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'

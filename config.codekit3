@@ -493,33 +493,33 @@
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/arcus\/dealers\/gewa-dealers-arcus.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/arcus\/dealers\/gewa-dealers-local.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/arcus\/dealers\/gewa-dealers-local.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/arcus\/mapbox\/gewa-mapbox-arcus.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/arcus\/mapbox\/gewa-mapbox-arcus.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/arcus\/mapbox\/gewa-mapbox-local.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/arcus\/mapbox\/gewa-mapbox-local.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/change_ver.sh" : {
       "cB" : 0,
@@ -676,65 +676,65 @@
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/musing\/dealers\/gewa-dealers-local.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/musing\/dealers\/gewa-dealers-musing.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/musing\/dealers\/gewa-dealers-musing.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/musing\/mapbox\/gewa-mapbox-local.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/musing\/mapbox\/gewa-mapbox-local.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/musing\/mapbox\/gewa-mapbox-musing.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/musing\/mapbox\/gewa-mapbox-musing.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/ovation\/dealers\/gewa-dealers-local.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/ovation\/dealers\/gewa-dealers-local.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/ovation\/dealers\/gewa-dealers-ovation.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/ovation\/dealers\/gewa-dealers-ovation.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/ovation\/mapbox\/gewa-mapbox-local.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/ovation\/mapbox\/gewa-mapbox-local.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/ovation\/mapbox\/gewa-mapbox-ovation.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/ovation\/mapbox\/gewa-mapbox-ovation.html",
-      "oF" : 0
+      "oF" : 1
     },
     "\/package.json" : {
       "ft" : 524288,

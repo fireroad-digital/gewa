@@ -529,14 +529,6 @@
       "oAP" : "\/arcus\/mapbox\/gewa-mapbox-local.html",
       "oF" : 1
     },
-    "\/change_ver.sh" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/change_ver.sh",
-      "oF" : 1
-    },
     "\/CLAUDE.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -838,9 +830,9 @@
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/shared\/gewa-dealers-min-min.css",
-      "oF" : 0,
+      "oF" : 1,
       "pg" : 0
     },
     "\/shared\/gewa-dealers-min.js" : {
@@ -848,9 +840,9 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/shared\/gewa-dealers-min-min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 0
     },
@@ -861,9 +853,9 @@
       "co" : 0,
       "ft" : 16,
       "ma" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/shared\/gewa-mapbox-min-min.css",
-      "oF" : 0,
+      "oF" : 1,
       "pg" : 0
     },
     "\/shared\/gewa-mapbox-min.js" : {
@@ -871,9 +863,9 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/shared\/gewa-mapbox-min-min.js",
-      "oF" : 0,
+      "oF" : 1,
       "sC" : 3,
       "tS" : 0
     },

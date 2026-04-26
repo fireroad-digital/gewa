@@ -1,6 +1,6 @@
 {
   "network": "arcus",
-  "updatedAt": "2026-04-24T16:23:08.681Z",
+  "updatedAt": "2026-04-26T06:48:09.966Z",
   "dealers": [
     {
       "Name": "Anderson Violins",
@@ -53,7 +53,7 @@
       "Longitude": -77.16368750000001,
       "_addressHash": "9800bb6be161",
       "PlusCode": "RR2P+3G",
-      "_geocodeNote": "Geocoded via Plus Code \u2014 precise"
+      "_geocodeNote": "Geocoded via Plus Code — precise"
     },
     {
       "Name": "Robert Cauer Violins",
@@ -106,7 +106,7 @@
       "Longitude": -77.43656250000001,
       "_addressHash": "87c620b94afc",
       "PlusCode": "VHP7+Q9",
-      "_geocodeNote": "Geocoded via Plus Code \u2014 precise"
+      "_geocodeNote": "Geocoded via Plus Code — precise"
     },
     {
       "Name": "J.S. Fisher Violins",
@@ -210,7 +210,7 @@
       "Longitude": -80.89231250000002,
       "_addressHash": "b48488cc0bc3",
       "PlusCode": "4425+33",
-      "_geocodeNote": "Geocoded via Plus Code \u2014 precise"
+      "_geocodeNote": "Geocoded via Plus Code — precise"
     },
     {
       "Name": "Hollinger Violins",
@@ -451,7 +451,7 @@
       "Longitude": -95.7493125,
       "_addressHash": "af27d5b0fda5",
       "PlusCode": "Q7H2+G7",
-      "_geocodeNote": "Geocoded via Plus Code \u2014 precise"
+      "_geocodeNote": "Geocoded via Plus Code — precise"
     },
     {
       "Name": "Schultz Strings",
@@ -538,7 +538,7 @@
       "Longitude": -81.7919375,
       "_addressHash": "1d05163269f0",
       "PlusCode": "56H5+Q6",
-      "_geocodeNote": "Geocoded via Plus Code \u2014 precise"
+      "_geocodeNote": "Geocoded via Plus Code — precise"
     },
     {
       "Name": "Barnes Violins",
@@ -629,7 +629,7 @@
       "Name": "Bay Fine Strings",
       "AddressLine1": "3632 Sacramento St",
       "AddressLine2": null,
-      "Address": "3632 Sacramento St, San Francisco, CA\u00a094118-1710",
+      "Address": "3632 Sacramento St, San Francisco, CA 94118-1710",
       "City": "San Francisco",
       "State": "California",
       "StateAbb": "CA",

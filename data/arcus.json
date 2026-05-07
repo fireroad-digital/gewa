@@ -1,29 +1,29 @@
 {
   "network": "arcus",
-  "updatedAt": "2026-05-06T07:07:23.395Z",
+  "updatedAt": "2026-05-07T07:13:05.641Z",
   "dealers": [
     {
       "Name": "Anderson Violins",
       "AddressLine1": "210 Yale Avenue",
       "AddressLine2": null,
-      "Address": "210 Yale Avenue, Swarthmore, PA 19081",
-      "City": "Swarthmore",
-      "State": "Pennsylvania",
-      "StateAbb": "PA",
-      "ZipCode": "19081",
+      "Address": "210 Yale Avenue",
+      "City": "New Haven",
+      "State": "Connecticut",
+      "StateAbb": "CT",
+      "ZipCode": "06515",
       "Phone": "610-328-6448",
       "Website": [
         "www.andersonviolins.com"
       ],
-      "Latitude": 39.8997935,
-      "Longitude": -75.3417994,
-      "_addressHash": "00a0d6998ee9"
+      "Latitude": 41.3160252,
+      "Longitude": -72.9600406,
+      "_addressHash": "430a1b9a8c22"
     },
     {
       "Name": "Atlanta Violins",
       "AddressLine1": "387 S Atlanta St",
       "AddressLine2": null,
-      "Address": "387 S Atlanta St, Roswell, GA 30075",
+      "Address": "387 S Atlanta St",
       "City": "Roswell",
       "State": "Georgia",
       "StateAbb": "GA",
@@ -34,14 +34,14 @@
       ],
       "Latitude": 34.0094304,
       "Longitude": -84.3605565,
-      "_addressHash": "5b166baf05ab"
+      "_addressHash": "5356bd723c6c"
     },
     {
       "Name": "Brobst Violin Shop",
-      "AddressLine1": "5586 General Washington Drive",
+      "AddressLine1": "5584 GENERAL WASHINGTON DR",
       "AddressLine2": null,
-      "Address": "5586 General Washington Drive, Alexandria, VA 22312",
-      "City": "Alexandria",
+      "Address": "5584 GENERAL WASHINGTON DR",
+      "City": "Springfield",
       "State": "Virginia",
       "StateAbb": "VA",
       "ZipCode": "22312",
@@ -49,17 +49,15 @@
       "Website": [
         "www.brobstviolinshop.com"
       ],
-      "Latitude": 38.80018750000001,
-      "Longitude": -77.16368750000001,
-      "_addressHash": "9800bb6be161",
-      "PlusCode": "RR2P+3G",
-      "_geocodeNote": "Geocoded via Plus Code — precise"
+      "Latitude": 38.7992477,
+      "Longitude": -77.1633865,
+      "_addressHash": "d0626a4ec227"
     },
     {
       "Name": "Robert Cauer Violins",
       "AddressLine1": "2242 N Cahuenga Blvd",
       "AddressLine2": null,
-      "Address": "2242 N Cahuenga Blvd, Los Angeles, CA 90068",
+      "Address": "2242 N Cahuenga Blvd",
       "City": "Los Angeles",
       "State": "California",
       "StateAbb": "CA",
@@ -70,7 +68,7 @@
       ],
       "Latitude": 34.1110756,
       "Longitude": -118.332122,
-      "_addressHash": "49f9d7f7a010"
+      "_addressHash": "f4b1aaba5430"
     },
     {
       "Name": "Chicago Strings",
@@ -88,25 +86,6 @@
       "Latitude": 42.0343864,
       "Longitude": -87.6823608,
       "_addressHash": "15cab3dff845"
-    },
-    {
-      "Name": "Day Violins",
-      "AddressLine1": "14221 Willard Road",
-      "AddressLine2": null,
-      "Address": "14221 Willard Road, Chantilly, VA 20151",
-      "City": "Chantilly",
-      "State": "Virginia",
-      "StateAbb": "VA",
-      "ZipCode": "20151",
-      "Phone": "703-391-9444",
-      "Website": [
-        "www.dayviolins.com"
-      ],
-      "Latitude": 38.8869375,
-      "Longitude": -77.43656250000001,
-      "_addressHash": "87c620b94afc",
-      "PlusCode": "VHP7+Q9",
-      "_geocodeNote": "Geocoded via Plus Code — precise"
     },
     {
       "Name": "J.S. Fisher Violins",
@@ -175,23 +154,6 @@
       "Latitude": 39.01709,
       "Longitude": -76.9204386,
       "_addressHash": "d1ef1cfcfa9f"
-    },
-    {
-      "Name": "Claire Givens Violins",
-      "AddressLine1": "1201 S Marquette Ave #150",
-      "AddressLine2": null,
-      "Address": "1201 S Marquette Ave #150, Minneapolis, MN 55403",
-      "City": "Minneapolis",
-      "State": "Minnesota",
-      "StateAbb": "MN",
-      "ZipCode": "55402",
-      "Phone": "612-375-0708",
-      "Website": [
-        "www.givensviolins.com"
-      ],
-      "Latitude": 44.9726509,
-      "Longitude": -93.2738951,
-      "_addressHash": "ef2e9d4495c6"
     },
     {
       "Name": "Cellos2Go",
@@ -281,7 +243,7 @@
       "_addressHash": "a027856d9060"
     },
     {
-      "Name": "Bob's House Of Basses/Prodigy Instruments",
+      "Name": "Bob's House Of Basses",
       "AddressLine1": "12301 Shafer Ln",
       "AddressLine2": null,
       "Address": "12301 Shafer Ln, Bowie, MD 20720",
@@ -291,29 +253,11 @@
       "ZipCode": "20720",
       "Phone": "301-805-9407",
       "Website": [
-        "www.bobshouseofbasses.com",
-        "www.prodigyinstruments.com"
+        "www.bobshouseofbasses.com"
       ],
       "Latitude": 38.9873609,
       "Longitude": -76.7928388,
       "_addressHash": "915964729f66"
-    },
-    {
-      "Name": "Marples Violins",
-      "AddressLine1": "1048 APRIL RAIN RD",
-      "AddressLine2": null,
-      "Address": "1048 APRIL RAIN RD, Lawrence, KS 66049-4716",
-      "City": "Lawrence",
-      "State": "Kansas",
-      "StateAbb": "KS",
-      "ZipCode": "66049",
-      "Phone": "785-424-3387",
-      "Website": [
-        "www.marplesviolins.com"
-      ],
-      "Latitude": 38.9665324,
-      "Longitude": -95.3228989,
-      "_addressHash": "5f40b08c4641"
     },
     {
       "Name": "Linda West Cellos",

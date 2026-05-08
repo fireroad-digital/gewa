@@ -1,29 +1,29 @@
 {
   "network": "arcus",
-  "updatedAt": "2026-05-07T07:13:05.641Z",
+  "updatedAt": "2026-05-08T06:46:37.776Z",
   "dealers": [
     {
       "Name": "Anderson Violins",
       "AddressLine1": "210 Yale Avenue",
       "AddressLine2": null,
-      "Address": "210 Yale Avenue",
-      "City": "New Haven",
-      "State": "Connecticut",
-      "StateAbb": "CT",
-      "ZipCode": "06515",
+      "Address": "210 Yale Avenue, Swarthmore, PA, 19081",
+      "City": "Swarthmore",
+      "State": "Pennsylvania",
+      "StateAbb": "PA",
+      "ZipCode": "19081",
       "Phone": "610-328-6448",
       "Website": [
         "www.andersonviolins.com"
       ],
-      "Latitude": 41.3160252,
-      "Longitude": -72.9600406,
-      "_addressHash": "430a1b9a8c22"
+      "Latitude": 39.8997935,
+      "Longitude": -75.3417994,
+      "_addressHash": "27d1215bc720"
     },
     {
       "Name": "Atlanta Violins",
       "AddressLine1": "387 S Atlanta St",
       "AddressLine2": null,
-      "Address": "387 S Atlanta St",
+      "Address": "387 S Atlanta St, Roswell, GA 30075",
       "City": "Roswell",
       "State": "Georgia",
       "StateAbb": "GA",
@@ -34,13 +34,13 @@
       ],
       "Latitude": 34.0094304,
       "Longitude": -84.3605565,
-      "_addressHash": "5356bd723c6c"
+      "_addressHash": "5b166baf05ab"
     },
     {
       "Name": "Brobst Violin Shop",
       "AddressLine1": "5584 GENERAL WASHINGTON DR",
       "AddressLine2": null,
-      "Address": "5584 GENERAL WASHINGTON DR",
+      "Address": "5584 GENERAL WASHINGTON DR, Springfield, VA 22312",
       "City": "Springfield",
       "State": "Virginia",
       "StateAbb": "VA",
@@ -50,14 +50,14 @@
         "www.brobstviolinshop.com"
       ],
       "Latitude": 38.7992477,
-      "Longitude": -77.1633865,
-      "_addressHash": "d0626a4ec227"
+      "Longitude": -77.1633835,
+      "_addressHash": "910aaaadff9b"
     },
     {
       "Name": "Robert Cauer Violins",
       "AddressLine1": "2242 N Cahuenga Blvd",
       "AddressLine2": null,
-      "Address": "2242 N Cahuenga Blvd",
+      "Address": "2242 N Cahuenga Blvd, Los Angeles, CA 90068",
       "City": "Los Angeles",
       "State": "California",
       "StateAbb": "CA",
@@ -68,7 +68,7 @@
       ],
       "Latitude": 34.1110756,
       "Longitude": -118.332122,
-      "_addressHash": "f4b1aaba5430"
+      "_addressHash": "49f9d7f7a010"
     },
     {
       "Name": "Chicago Strings",

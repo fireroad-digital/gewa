@@ -1,6 +1,6 @@
 {
   "network": "arcus",
-  "updatedAt": "2026-09-29T12:31:48.643Z",
+  "updatedAt": "2026-10-01T12:52:01.002Z",
   "dealers": [
     {
       "Name": "Anderson Violins",
@@ -585,6 +585,25 @@
       "Latitude": 37.787703,
       "Longitude": -122.452629,
       "_addressHash": "606ccac14a02"
+    },
+    {
+      "Name": "The Violin House of Weaver",
+      "AddressLine1": "4706 Highland Ave",
+      "AddressLine2": null,
+      "Address": "4706 Highland Ave, Bethesday, MD 20814-3612",
+      "City": null,
+      "State": "Maryland",
+      "StateAbb": "MD",
+      "ZipCode": null,
+      "Phone": "301-654-2239",
+      "Website": [
+        "www.weaversviolins.us"
+      ],
+      "Latitude": null,
+      "Longitude": null,
+      "_addressHash": "1fcc0514676f",
+      "_geocodeFailed": true,
+      "_geocodeNote": "Nominatim returned no results — requires manual geocoding"
     }
   ]
 }
